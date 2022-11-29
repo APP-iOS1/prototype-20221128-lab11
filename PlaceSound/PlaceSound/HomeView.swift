@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  PlaceSound
 //
-//  Created by 박성민, 박정선 on 2022/11/29.
+//  Created by 박성민, 바 on 2022/11/29.
 //
 
 import SwiftUI
