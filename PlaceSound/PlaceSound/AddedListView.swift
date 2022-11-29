@@ -195,10 +195,12 @@ struct AddedListView: View {
                                 Text("After Like")
                                     .font(.title3)
                                     .fontWeight(.medium)
+                                    .offset(y: 7)
                             }
                             Text("IVE")
                                 .font(.headline)
                                 .foregroundColor(.gray)
+                                .offset(y: 7)
                             HStack {
                                 Spacer()
                                 Button(action: {
