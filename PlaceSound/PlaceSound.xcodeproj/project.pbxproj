@@ -14,6 +14,8 @@
 		F091F5082935C17800537E49 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091F5072935C17800537E49 /* HomeView.swift */; };
 		F091F50A2935C18300537E49 /* NearbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091F5092935C18300537E49 /* NearbyView.swift */; };
 		F091F50C2935C18D00537E49 /* MyLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091F50B2935C18D00537E49 /* MyLogView.swift */; };
+		F091F50E2935ECC300537E49 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091F50D2935ECC300537E49 /* TabButton.swift */; };
+		F091F5102935ECE000537E49 /* PlayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091F50F2935ECE000537E49 /* PlayBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		F091F5072935C17800537E49 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F091F5092935C18300537E49 /* NearbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyView.swift; sourceTree = "<group>"; };
 		F091F50B2935C18D00537E49 /* MyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogView.swift; sourceTree = "<group>"; };
+		F091F50D2935ECC300537E49 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		F091F50F2935ECE000537E49 /* PlayBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				F091F4FB2935BFC600537E49 /* ContentView.swift */,
 				F091F5072935C17800537E49 /* HomeView.swift */,
 				F091F5092935C18300537E49 /* NearbyView.swift */,
+				F091F50D2935ECC300537E49 /* TabButton.swift */,
+				F091F50F2935ECE000537E49 /* PlayBar.swift */,
 				F091F50B2935C18D00537E49 /* MyLogView.swift */,
 				F091F4FD2935BFC800537E49 /* Assets.xcassets */,
 				F091F4FF2935BFC800537E49 /* Preview Content */,
@@ -149,6 +155,8 @@
 				F091F5082935C17800537E49 /* HomeView.swift in Sources */,
 				F091F4FC2935BFC600537E49 /* ContentView.swift in Sources */,
 				F091F50C2935C18D00537E49 /* MyLogView.swift in Sources */,
+				F091F50E2935ECC300537E49 /* TabButton.swift in Sources */,
+				F091F5102935ECE000537E49 /* PlayBar.swift in Sources */,
 				F091F4FA2935BFC600537E49 /* PlaceSoundApp.swift in Sources */,
 				F091F50A2935C18300537E49 /* NearbyView.swift in Sources */,
 			);
