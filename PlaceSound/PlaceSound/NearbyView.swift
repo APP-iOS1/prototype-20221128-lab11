@@ -22,8 +22,9 @@ struct NearbyView: View {
                 HStack {
                     Text("송산1동")
                     Text("주변")
+                    // 범위를 지정해줄 Picker 선언
                     Picker(selection: $rangeListIndex, label: Text("범위")) {
-                        ForEach (0..<rangeList.count) {
+                        ForEach (0..<rangeList.count, id:\.self) {
                             Text(self.rangeList[$0])
                         }
                     }
@@ -34,7 +35,9 @@ struct NearbyView: View {
             .padding(.horizontal)
             
             Divider()
+            // 노래 리스트들을 보여줄 스크롤 뷰
             ScrollView {
+                // 노래 리스트가 10개 이상인 경우 오류가 발생하므로 Group 으로 묶어주었다.
                 Group {
                     HStack {
                         ZStack {

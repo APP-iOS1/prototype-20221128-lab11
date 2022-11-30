@@ -20,6 +20,7 @@
 		F091F5102935ECE000537E49 /* PlayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091F50F2935ECE000537E49 /* PlayBar.swift */; };
 		F0B2DF3D2936FB2A00C8CC05 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B2DF3C2936FB2A00C8CC05 /* SearchBar.swift */; };
 		F0B2DF3F2936FB3D00C8CC05 /* AddPlaceSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B2DF3E2936FB3D00C8CC05 /* AddPlaceSound.swift */; };
+		F0B2DF41293716A100C8CC05 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B2DF40293716A100C8CC05 /* PlaceAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F0B2DF3B2936F55900C8CC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F0B2DF3C2936FB2A00C8CC05 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		F0B2DF3E2936FB3D00C8CC05 /* AddPlaceSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceSound.swift; sourceTree = "<group>"; };
+		F0B2DF40293716A100C8CC05 /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				8696BFF72935C5BE002C547C /* SettingView.swift */,
 				F0B2DF3C2936FB2A00C8CC05 /* SearchBar.swift */,
 				F0B2DF3E2936FB3D00C8CC05 /* AddPlaceSound.swift */,
+				F0B2DF40293716A100C8CC05 /* PlaceAnnotationView.swift */,
 				F091F4FD2935BFC800537E49 /* Assets.xcassets */,
 				F091F4FF2935BFC800537E49 /* Preview Content */,
 			);
@@ -175,6 +178,7 @@
 				F091F5102935ECE000537E49 /* PlayBar.swift in Sources */,
 				F0B2DF3F2936FB3D00C8CC05 /* AddPlaceSound.swift in Sources */,
 				037609C62936580600189F56 /* AddedListView.swift in Sources */,
+				F0B2DF41293716A100C8CC05 /* PlaceAnnotationView.swift in Sources */,
 				F091F50E2935ECC300537E49 /* TabButton.swift in Sources */,
 				F091F5102935ECE000537E49 /* PlayBar.swift in Sources */,
 				F091F4FA2935BFC600537E49 /* PlaceSoundApp.swift in Sources */,

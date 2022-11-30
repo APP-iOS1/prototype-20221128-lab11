@@ -21,7 +21,9 @@ extension CLLocationCoordinate2D: Identifiable {
 
 
 struct HomeView: View {
-    @State private var showingSheet = false
+    // modal sheet를 보여줄지를 결정하는 상태 프로퍼티
+    @State private var showingAddMarker = false
+    
     @State private var searchText = ""
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.5665,
@@ -37,23 +39,28 @@ struct HomeView: View {
     var body: some View {
 
         //        NavigationStack {
-        ZStack {
-            Map(coordinateRegion: $region, annotationItems: annotations) {
-                MapMarker(coordinate: $0.coordinate, tint: .purple)
+//        ZStack {
+            Map(coordinateRegion: $region, annotationItems: annotations) { item in
+//                MapMarker(coordinate: $0.coordinate, tint: .purple)
+                // Custom mapmarker 사용을 위하여 MapMarker를 MapAnnotation으로 대체
+                MapAnnotation(coordinate: item.coordinate, content: {
+                    PlaceAnnotationView(title: item.name)
+                })
             }
             .gesture(DragGesture())
             .onLongPressGesture {
-                showingSheet.toggle()
+                // 길게 누르는 제스쳐를 했을 때 모달 시트가 보이도록 toggle
+                showingAddMarker.toggle()
             }
-            .sheet(isPresented: $showingSheet, content: {
-                AddedListView()
-                    .presentationDetents([.fraction(0.3), .fraction(1)])
+            .sheet(isPresented: $showingAddMarker, content: {
+                AddPlaceSound()
+                    .presentationDetents([.fraction(0.5), .fraction(1)])
             })
             .ignoresSafeArea()
+//            Text("")
+//                .searchable(text: $searchText, prompt: "Search Place Sound")
+//        }
 
-            Text("")
-                .searchable(text: $searchText, prompt: "Search Place Sound")
-        }
         //        }
     }
 }
