@@ -32,58 +32,57 @@ struct MyLogView: View {
     
     var body: some View {
         VStack {
-            
+    
             // 세팅뷰 연결
-//            NavigationStack {
-                
-        
+            HStack {
                 NavigationLink {
-                        SettingView()
-                    } label: {
-                        Image(systemName: "gearshape")
-                            .resizable()
-                            .foregroundColor(.black)
-                            .frame(width: 30, height: 30)
-                            .padding()
-                }
-            
-                
-                // user 프로필
-                Image("mylog_profileimg")
-                    .resizable()
-                    .cornerRadius(100)
-                    .frame(width: 90, height: 90)
-                Text("\(userName)")
-                    .bold()
-                Divider()
-                
-                HStack {
-                    Text("전체 \(15)")
-                        .bold()
-                    Picker("기간전체", selection: $selctedDate) {
-                        ForEach(userDate, id: \.self) {
-                            Text($0)
-                        }
-                    }
-                    .pickerStyle(.menu)
+                    SettingView()
                     
+                } label: {
                     Spacer()
-                    Button {
-                        // 새로 연결할 뷰 (준비중 입니다...)
-                    } label: {
-                        Text("편집")
-                    }
-                    
+                    Image(systemName: "gearshape")
+                        .resizable()
+                        .foregroundColor(.black)
+                        .frame(width: 30, height: 30)
+                        .offset(y: -30)
+                        .padding()
                 }
-                List {
-                    LogListData(userDataArray: $userDataArray)
-                }.listStyle(.plain)
-                    .padding()
             }
-//        }
+            // user 프로필
+            Image("mylog_profileimg")
+                .resizable()
+                .cornerRadius(100)
+                .frame(width: 90, height: 90)
+            Text("\(userName)")
+                .bold()
+            Divider()
+            
+            HStack {
+                Text("전체 \(15)")
+                    .bold()
+                Picker("기간전체", selection: $selctedDate) {
+                    ForEach(userDate, id: \.self) {
+                        Text($0)
+                    }
+                }
+                .pickerStyle(.menu)
+                
+                Spacer()
+                Button {
+                    // 새로 연결할 뷰 (준비중 입니다...)
+                } label: {
+                    Text("편집")
+                }
+                
+            }.padding()
+            
+            List {
+                LogListData(userDataArray: $userDataArray)
+            }.listStyle(.plain)
+                .padding()
+        }
     }
 }
-
 
 
 struct LogListData: View {
