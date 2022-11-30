@@ -10,16 +10,17 @@ import SwiftUI
 struct AddedListView: View {
     var body: some View {
         VStack {
-            HStack {
-                Text("송산동")
-                    .fontWeight(.bold)
-                    .font(.title3)
-                    .offset(x: -90)
-                Text("에서 들은 음악")
-                    .offset(x: -90)
-                    .font(.title3)
-            }
             Spacer()
+            VStack {
+                HStack {
+                    Text("송산1동")
+                        .fontWeight(.semibold)
+                    Text("에서 들은 곡")
+                    Spacer()
+                }
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 10)
             Divider()
             
             ScrollView {
