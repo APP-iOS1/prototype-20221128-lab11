@@ -177,54 +177,54 @@ struct AddedListView: View {
                     .padding(.horizontal)
                     
                     Divider()
-                    
-                    HStack {
-                        ZStack {
-                            AsyncImage(url: URL(string: "https://cdnimg.melon.co.kr/cm2/album/images/110/34/298/11034298_20220822101843_500.jpg/melon/optimize/90")) { image in
-                                image
-                                    .resizable()
-                                    .clipShape(RoundedRectangle(cornerRadius: 5))
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            .frame(width: 60, height: 60)
-                        }
-                        Spacer()
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("After Like")
-                                    .font(.title3)
-                                    .fontWeight(.medium)
-                                    .offset(y: 7)
-                            }
-                            Text("IVE")
-                                .font(.headline)
-                                .foregroundColor(.gray)
-                                .offset(y: 7)
-                            HStack {
-                                Spacer()
-                                Button(action: {
-                                }, label: {
-                                    Label("more", systemImage: "")
-                                        .labelStyle(.iconOnly)
-                                        .foregroundColor(.gray)
-                                        .offset(y: -20)
-                                })
-                                Image(systemName: "play.fill")
-                                    .offset(x: -50, y: -30)
-                                Image(systemName: "pause.fill")
-                                    .offset(x: -40, y: -30)
-                                Image(systemName: "forward.fill")
-                                    .offset(x: -30, y: -30)
-                            }
-                        }
-                    }
-                    .frame(height: 60)
-                    .padding(.horizontal)
-                    .offset(y:350)
-                    
-                    Divider()
-                        .offset(y:260)
+//
+//                    HStack {
+//                        ZStack {
+//                            AsyncImage(url: URL(string: "https://cdnimg.melon.co.kr/cm2/album/images/110/34/298/11034298_20220822101843_500.jpg/melon/optimize/90")) { image in
+//                                image
+//                                    .resizable()
+//                                    .clipShape(RoundedRectangle(cornerRadius: 5))
+//                            } placeholder: {
+//                                ProgressView()
+//                            }
+//                            .frame(width: 60, height: 60)
+//                        }
+//                        Spacer()
+//                        VStack(alignment: .leading) {
+//                            HStack {
+//                                Text("After Like")
+//                                    .font(.title3)
+//                                    .fontWeight(.medium)
+//                                    .offset(y: 7)
+//                            }
+//                            Text("IVE")
+//                                .font(.headline)
+//                                .foregroundColor(.gray)
+//                                .offset(y: 7)
+//                            HStack {
+//                                Spacer()
+//                                Button(action: {
+//                                }, label: {
+//                                    Label("more", systemImage: "")
+//                                        .labelStyle(.iconOnly)
+//                                        .foregroundColor(.gray)
+//                                        .offset(y: -20)
+//                                })
+//                                Image(systemName: "play.fill")
+//                                    .offset(x: -50, y: -30)
+//                                Image(systemName: "pause.fill")
+//                                    .offset(x: -40, y: -30)
+//                                Image(systemName: "forward.fill")
+//                                    .offset(x: -30, y: -30)
+//                            }
+//                        }
+//                    }
+//                    .frame(height: 60)
+//                    .padding(.horizontal)
+//                    .offset(y:350)
+//
+//                    Divider()
+//                        .offset(y:260)
                     
                 }
             }

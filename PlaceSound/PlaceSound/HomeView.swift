@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  PlaceSound
 //
-//  Created by 박성민, 바 on 2022/11/29.
+//  Created by 박성민, 박정선 on 2022/11/29.
 //
 
 import SwiftUI
@@ -34,17 +34,16 @@ struct HomeView: View {
         ]
     
     var body: some View {
-        NavigationView {
-            VStack {
-                
+//        NavigationStack {
+            ZStack {
                 Map(coordinateRegion: $region, annotationItems: annotations) {
                     MapMarker(coordinate: $0.coordinate, tint: .purple)
                         }
                    .ignoresSafeArea()
-                Text("\(searchText)")
+                Text("")
                     .searchable(text: $searchText, prompt: "Search Place Sound")
             }
-        }
+//        }
     }
 }
 
