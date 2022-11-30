@@ -40,11 +40,13 @@ struct MyLogView: View {
                 } label: {
                     Spacer()
                     Image(systemName: "gearshape")
-                        .resizable()
-                        .foregroundColor(.black)
-                        .frame(width: 30, height: 30)
-                        .offset(y: -30)
-                        .padding()
+                        .font(.title2)
+//                        .resizable()
+                        .foregroundColor(.placeSoundPurple)
+//                        .frame(width: 30, height: 30)
+//                        .offset(y: -30)
+                        .padding(.top, -15)
+                        .padding(.trailing)
                 }
             }
             // user 프로필
@@ -52,7 +54,8 @@ struct MyLogView: View {
                 .resizable()
                 .cornerRadius(100)
                 .frame(width: 90, height: 90)
-            Text("\(userName)")
+            Text("아이유베프테디팍🧸")
+                .font(.title3)
                 .bold()
             Divider()
             
@@ -73,12 +76,12 @@ struct MyLogView: View {
                     Text("편집")
                 }
                 
-            }.padding()
+            }.padding(.horizontal)
+                .padding(.bottom, -5)
             
             List {
                 LogListData(userDataArray: $userDataArray)
             }.listStyle(.plain)
-                .padding()
         }
     }
 }

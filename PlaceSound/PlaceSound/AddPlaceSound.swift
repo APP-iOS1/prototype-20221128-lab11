@@ -27,7 +27,7 @@ struct AddPlaceSound: View {
 struct AddPlaceSound_Header: View {
     var body: some View {
         Text("Place Sound 추가하기")
-            .font(.title)
+            .font(.title2)
             .fontWeight(.semibold)
             .padding(.leading, 15.0)
         Divider()

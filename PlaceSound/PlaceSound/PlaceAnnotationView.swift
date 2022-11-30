@@ -15,14 +15,14 @@ struct PlaceAnnotationView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            Text(title)
-                .foregroundColor(.white)
-                .font(.callout)
-                .padding(5)
-                .background(Color.placeSoundPurple)
-                .cornerRadius(10)
-                .opacity(showTitle ? 0 : 1)
-                .padding(.bottom, 5)
+//            Text(title)
+//                .foregroundColor(.white)
+//                .font(.callout)
+//                .padding(5)
+//                .background(Color.placeSoundPurple)
+//                .cornerRadius(10)
+//                .opacity(showTitle ? 0 : 1)
+//                .padding(.bottom, 5)
             
             Image("mapMarker")
                 .resizable()
