@@ -35,6 +35,7 @@ struct HomeView: View {
     ]
     
     var body: some View {
+
         //        NavigationStack {
         ZStack {
             Map(coordinateRegion: $region, annotationItems: annotations) {
@@ -49,6 +50,7 @@ struct HomeView: View {
                     .presentationDetents([.fraction(0.3), .fraction(1)])
             })
             .ignoresSafeArea()
+
             Text("")
                 .searchable(text: $searchText, prompt: "Search Place Sound")
         }
