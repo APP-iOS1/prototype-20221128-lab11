@@ -32,43 +32,58 @@ struct MyLogView: View {
     
     var body: some View {
         VStack {
-            // user 프로필
-            Image("mylog_profileimg")
-                .resizable()
-                .cornerRadius(100)
-                .frame(width: 90, height: 90)
             
-            Text("\(userName)")
-                .bold()
+            // 세팅뷰 연결
+//            NavigationStack {
+                
+        
+                NavigationLink {
+                        SettingView()
+                    } label: {
+                        Image(systemName: "gearshape")
+                            .resizable()
+                            .foregroundColor(.black)
+                            .frame(width: 30, height: 30)
+                            .padding()
+                }
             
-            Divider()
-            
-            HStack {
-                Text("전체 \(15)")
+                
+                // user 프로필
+                Image("mylog_profileimg")
+                    .resizable()
+                    .cornerRadius(100)
+                    .frame(width: 90, height: 90)
+                Text("\(userName)")
                     .bold()
+                Divider()
                 
-                Picker("기간전체", selection: $selctedDate) {
-                    ForEach(userDate, id: \.self) {
-                        Text($0)
+                HStack {
+                    Text("전체 \(15)")
+                        .bold()
+                    Picker("기간전체", selection: $selctedDate) {
+                        ForEach(userDate, id: \.self) {
+                            Text($0)
+                        }
                     }
+                    .pickerStyle(.menu)
+                    
+                    Spacer()
+                    Button {
+                        // 새로 연결할 뷰 (준비중 입니다...)
+                    } label: {
+                        Text("편집")
+                    }
+                    
                 }
-                .pickerStyle(.menu)
-                
-                Spacer()
-                Button {
-                    // 새로 연결할 뷰 (준비중 입니다...)
-                } label: {
-                    Text("편집")
-                }
-                
+                List {
+                    LogListData(userDataArray: $userDataArray)
+                }.listStyle(.plain)
+                    .padding()
             }
-            List {
-                LogListData(userDataArray: $userDataArray)
-            }.listStyle(.plain)
-        }
-        .padding()
+//        }
     }
 }
+
 
 
 struct LogListData: View {
@@ -78,35 +93,35 @@ struct LogListData: View {
     var body: some View {
         
         ForEach(userDataArray.sorted(by: >), id: \.key) { key, value in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("\(key)")
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("\(key)")
+                        .font(.headline)
+                        .foregroundColor(.black)
+                    Text("\(value)")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
+            }
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(listData) { item in
+                        VStack {
+                            
+                            Image(item.mainImage)
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                            Text(item.title)
                                 .font(.headline)
                                 .foregroundColor(.black)
-                            Text("\(value)")
+                            Text(item.description)
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
                         }
                     }
-        ScrollView(.horizontal) {
-            HStack {
-                ForEach(listData) { item in
-                    VStack {
-                      
-                        Image(item.mainImage)
-                            .resizable()
-                            .frame(width: 100, height: 100)
-                        Text(item.title)
-                            .font(.headline)
-                            .foregroundColor(.black)
-                        Text(item.description)
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                    }
                 }
             }
         }
-      }
     }
 }
 
