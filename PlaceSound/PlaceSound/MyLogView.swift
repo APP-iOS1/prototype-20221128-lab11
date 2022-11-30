@@ -37,7 +37,6 @@ struct MyLogView: View {
             HStack {
                 NavigationLink {
                     SettingView()
-                    
                 } label: {
                     Spacer()
                     Image(systemName: "gearshape")
