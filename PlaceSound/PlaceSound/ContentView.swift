@@ -9,19 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            NearbyView()
-                .tabItem {
-                    Label("Nearby", systemImage: "star.fill")
-                }
-            HomeView()
-                .tabItem {
-                    Label("Home", systemImage: "music.note.house.fill")
-                }
-            MyLogView()
-                .tabItem {
-                    Label("MyLog", systemImage: "clock.arrow.circlepath")
-                }
+        NavigationStack {
+            ZStack {
+                HomeView()
+                TabButton()
+            }
         }
     }
 }
