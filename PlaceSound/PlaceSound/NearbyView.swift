@@ -21,7 +21,11 @@ struct NearbyView: View {
             VStack {
                 HStack {
                     Text("송산1동")
+                        .foregroundColor(.placeSoundPurple)
+                        .font(.title2)
+                        .fontWeight(.bold)
                     Text("주변")
+                        .font(.title2)
                     // 범위를 지정해줄 Picker 선언
                     Picker(selection: $rangeListIndex, label: Text("범위")) {
                         ForEach (0..<rangeList.count, id:\.self) {
@@ -30,7 +34,6 @@ struct NearbyView: View {
                     }
                     Spacer()
                 }
-                .fontWeight(.semibold)
             }
             .padding(.horizontal)
             
