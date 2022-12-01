@@ -15,20 +15,20 @@ struct userData: Identifiable {
 }
 
 var listData: [userData] = [
-    userData(mainImage: "musicImg", title: "아이유", description: "나는 가나의 안드레아이유가 아니유"),
-    userData(mainImage: "musicImg2", title: "아이유", description: "아이유님의 상큼한 노래입니다"),
-    userData(mainImage: "musicImg", title: "아이유", description: "아이유 짱짱짱짱짱"),
-    userData(mainImage: "musicImg2", title: "아이유", description: "아이유님의 상콤달콤한 노래입니다"),
+    userData(mainImage: "musicImg", title: "Flower", description: "IU"),
+    userData(mainImage: "musicImg2", title: "Flower", description: "IU"),
+    userData(mainImage: "musicImg", title: "Flower", description: "IU"),
+    userData(mainImage: "musicImg2", title: "Flower", description: "IU"),
 ]
 
 struct MyLogView: View {
     
     @State private var selctedDate: String = ""
-    @State private var userDate: [String] = ["어제", "그저께", "3일전"]
+    @State private var userDate: [String] = ["Yesterday", "This Week", "This Month"]
     
-    @State private var userDataArray: [String:String] = ["어제":"압구정 로데오거리", "그저께":"강남역 뱅뱅사거리", "3일전":"애플 가로수길"]
+    @State private var userDataArray: [String:String] = ["Yesterday":"Fairfax", "This Week":"Centreville", "This Month":"Haymarket"]
     
-    var userName: String = "아이유"
+    var userName: String = "IU"
     
     var body: some View {
         VStack {
@@ -54,15 +54,15 @@ struct MyLogView: View {
                 .resizable()
                 .cornerRadius(100)
                 .frame(width: 90, height: 90)
-            Text("아이유베프테디팍🧸")
+            Text("ILOVEU🧸")
                 .font(.title3)
                 .bold()
             Divider()
             
             HStack {
-                Text("전체 \(15)")
+                Text("All \(15)")
                     .bold()
-                Picker("기간전체", selection: $selctedDate) {
+                Picker("All", selection: $selctedDate) {
                     ForEach(userDate, id: \.self) {
                         Text($0)
                     }
@@ -73,7 +73,7 @@ struct MyLogView: View {
                 Button {
                     // 새로 연결할 뷰 (준비중 입니다...)
                 } label: {
-                    Text("편집")
+                    Text("Edit")
                 }
                 
             }.padding(.horizontal)

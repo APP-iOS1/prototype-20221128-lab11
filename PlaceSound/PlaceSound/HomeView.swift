@@ -30,6 +30,7 @@ struct HomeView: View {
                                        longitude: 126.9780),
         span: MKCoordinateSpan(latitudeDelta: 0.006, longitudeDelta: 0.006))
     
+    // 주소를 haymarket으로
     let annotations = [
         City(name: "Seoul", coordinate: CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780)),
         City(name: "Seoul2", coordinate: CLLocationCoordinate2D(latitude: 37.5669, longitude: 126.9788)),
