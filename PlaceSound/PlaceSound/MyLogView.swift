@@ -15,20 +15,18 @@ struct userData: Identifiable {
 }
 
 var listData: [userData] = [
-    userData(mainImage: "musicImg", title: "아이유", description: "나는 가나의 안드레아이유가 아니유"),
-    userData(mainImage: "musicImg2", title: "아이유", description: "아이유님의 상큼한 노래입니다"),
-    userData(mainImage: "musicImg", title: "아이유", description: "아이유 짱짱짱짱짱"),
-    userData(mainImage: "musicImg2", title: "아이유", description: "아이유님의 상콤달콤한 노래입니다"),
+    userData(mainImage: "musicImg2", title: "아이유", description: "Palette"),
+    userData(mainImage: "musicImg", title: "아이유", description: "꽃갈피 둘"),
+    userData(mainImage: "musicImg3", title: "아이유", description: "이 지금"),
+    userData(mainImage: "musicImg2", title: "아이유", description: "밤편지"),
 ]
 
 struct MyLogView: View {
     
     @State private var selctedDate: String = ""
-    @State private var userDate: [String] = ["어제", "그저께", "3일전"]
+    @State private var userDate: [String] = [ "전체기간" ,"오늘", "어제", "3개월전", "6개월전"]
     
-    @State private var userDataArray: [String:String] = ["어제":"압구정 로데오거리", "그저께":"강남역 뱅뱅사거리", "3일전":"애플 가로수길"]
-    
-    var userName: String = "아이유"
+    @State private var userDataArray: [String:String] = ["전체기간":"압구정 로데오거리", "오늘":"강남역 뱅뱅사거리", "어제":"애플 가로수길", "3개월전":"신촌 포장마차"]
     
     var body: some View {
         VStack {
@@ -59,6 +57,7 @@ struct MyLogView: View {
                 .bold()
             Divider()
             
+            // 날짜 필터 Picker
             HStack {
                 Text("전체 \(15)")
                     .bold()
@@ -107,17 +106,18 @@ struct LogListData: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(listData) { item in
-                        VStack {
-                            
+                        VStack(alignment: .leading) {
                             Image(item.mainImage)
                                 .resizable()
-                                .frame(width: 100, height: 100)
+                                .frame(width: 150, height: 150)
                             Text(item.title)
                                 .font(.headline)
                                 .foregroundColor(.black)
+                                .offset(x: 5)
                             Text(item.description)
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
+                                .offset(x: 5)
                         }
                     }
                 }
