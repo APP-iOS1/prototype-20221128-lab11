@@ -10,6 +10,7 @@ import SwiftUI
 struct AddPlaceSound: View {
     
     var body: some View {
+        ZStack {
             VStack(alignment: .leading, spacing: 20) {
                 Spacer()
                 AddPlaceSound_Header()
@@ -17,16 +18,21 @@ struct AddPlaceSound: View {
                 ScrollView {
                     PlaceSearch()
                     SongSearch()
-                    Spacer()
-                    SaveButton()
+                    //                    Spacer()
+                    //                    SaveButton()
                 }
             }
+            VStack {
+                Spacer()
+                SaveButton()
+            }
+        }
     }
 }
 
 struct AddPlaceSound_Header: View {
     var body: some View {
-        Text("Place Sound 추가하기")
+        Text("Add Songs")
             .font(.title2)
             .fontWeight(.semibold)
             .padding(.leading, 15.0)
@@ -43,7 +49,7 @@ struct PlaceSearch: View {
                 .padding(.leading, 15.0)
             VStack {
                 HStack {
-                    Text("장소를 입력해주세요")
+                    Text("Enter Place")
                         .padding(.leading, 15.0)
                     Spacer()
                 }
@@ -59,12 +65,12 @@ struct SongSearch: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Sound")
+                Text("Search ")
                     .font(.title3)
                     .fontWeight(.medium)
                 Spacer()
             }
-                .padding(.leading, 15.0)
+            .padding(.leading, 15.0)
             SearchBar()
                 .padding()
             AddedListView()
@@ -80,7 +86,7 @@ struct SaveButton: View {
                 Rectangle()
                     .cornerRadius(40)
                     .frame(width: 310, height: 50)
-                Text("저장하기")
+                Text("Save")
                     .foregroundColor(.white)
             }
         }

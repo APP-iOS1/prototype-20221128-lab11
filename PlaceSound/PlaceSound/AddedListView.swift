@@ -13,10 +13,10 @@ struct AddedListView: View {
             Spacer()
             VStack {
                 HStack {
-                    Text("송산1동")
+                    Text("Heard From")
+                    Text("Haymarket")
                         .fontWeight(.bold)
                         .foregroundColor(.placeSoundPurple)
-                    Text("에서 들은 곡")
                     Spacer()
                 }
                 .font(.title2)

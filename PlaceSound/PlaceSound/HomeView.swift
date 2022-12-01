@@ -19,21 +19,22 @@ extension CLLocationCoordinate2D: Identifiable {
     }
 }
 
-
 struct HomeView: View {
     // modal sheet를 보여줄지를 결정하는 상태 프로퍼티
     @State private var showingAddMarker = false
     
     @State private var searchText = ""
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 37.5665,
-                                       longitude: 126.9780),
-        span: MKCoordinateSpan(latitudeDelta: 0.006, longitudeDelta: 0.006))
+        center: CLLocationCoordinate2D(latitude: 40.729675,
+                                       longitude: -73.996925),
+        span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 0.006))
     
+    // 0.006
+    // 주소를 haymarket으로
     let annotations = [
-        City(name: "Seoul", coordinate: CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780)),
-        City(name: "Seoul2", coordinate: CLLocationCoordinate2D(latitude: 37.5669, longitude: 126.9788)),
-        City(name: "Seoul3", coordinate: CLLocationCoordinate2D(latitude: 37.5660, longitude: 126.9760)),
+        City(name: "NewYork1", coordinate: CLLocationCoordinate2D(latitude: 40.729675, longitude: -73.996925)),
+        City(name: "NewYork2", coordinate: CLLocationCoordinate2D(latitude: 40.729600, longitude: -73.996990)),
+        City(name: "NewYork3", coordinate: CLLocationCoordinate2D(latitude: 40.729300, longitude: -73.996930)),
     ]
     
     var body: some View {
@@ -45,6 +46,7 @@ struct HomeView: View {
                 // Custom mapmarker 사용을 위하여 MapMarker를 MapAnnotation으로 대체
                 MapAnnotation(coordinate: item.coordinate, content: {
                     PlaceAnnotationView(title: item.name)
+                    
                 })
             }
             .gesture(DragGesture())

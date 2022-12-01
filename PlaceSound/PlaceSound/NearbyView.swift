@@ -20,14 +20,14 @@ struct NearbyView: View {
             Spacer()
             VStack {
                 HStack {
-                    Text("송산1동")
+                    Text("Haymarket Virginia, 20169")
                         .foregroundColor(.placeSoundPurple)
                         .font(.title2)
                         .fontWeight(.bold)
-                    Text("주변")
+                    Text("")
                         .font(.title2)
                     // 범위를 지정해줄 Picker 선언
-                    Picker(selection: $rangeListIndex, label: Text("범위")) {
+                    Picker(selection: $rangeListIndex, label: Text("Distance")) {
                         ForEach (0..<rangeList.count, id:\.self) {
                             Text(self.rangeList[$0])
                         }
@@ -263,9 +263,9 @@ struct NearbyView: View {
                             })
                         }
                         VStack(alignment: .leading) {
-                            Text("라일락")
+                            Text("Lilac")
                                 .fontWeight(.semibold)
-                            Text("아이유")
+                            Text("IU")
                                 .foregroundColor(.gray)
                             Spacer()
                             HStack {
@@ -362,9 +362,9 @@ struct NearbyView: View {
                             })
                         }
                         VStack(alignment: .leading) {
-                            Text("나의 사춘기에게")
+                            Text("To My Youth")
                                 .fontWeight(.semibold)
-                            Text("볼빨간사춘기")
+                            Text("BOL4")
                                 .foregroundColor(.gray)
                             Spacer()
                             HStack {
