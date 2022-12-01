@@ -15,20 +15,21 @@ struct userData: Identifiable {
 }
 
 var listData: [userData] = [
-    userData(mainImage: "musicImg", title: "Flower", description: "IU"),
-    userData(mainImage: "musicImg2", title: "Flower", description: "IU"),
-    userData(mainImage: "musicImg", title: "Flower", description: "IU"),
-    userData(mainImage: "musicImg2", title: "Flower", description: "IU"),
+
+    userData(mainImage: "musicImg2", title: "IU", description: "Palette"),
+    userData(mainImage: "musicImg", title: "IU", description: "꽃갈피 둘"),
+    userData(mainImage: "musicImg3", title: "IU", description: "이 지금"),
+    userData(mainImage: "musicImg2", title: "IU", description: "밤편지"),
 ]
 
 struct MyLogView: View {
     
     @State private var selctedDate: String = ""
-    @State private var userDate: [String] = ["Yesterday", "This Week", "This Month"]
+
+    @State private var userDate: [String] = [ "All" ,"Today", "Yesterday", "3months ago", "6months ago"]
     
-    @State private var userDataArray: [String:String] = ["Yesterday":"Fairfax", "This Week":"Centreville", "This Month":"Haymarket"]
-    
-    var userName: String = "IU"
+    @State private var userDataArray: [String:String] = ["All":"Apgujeong Rodeo Street", "Today":"Gangnam Station", "Yesterday":"Apple garosu-gil", "3monthes ago":"Sinchon"]
+
     
     var body: some View {
         VStack {
@@ -59,6 +60,7 @@ struct MyLogView: View {
                 .bold()
             Divider()
             
+            // 날짜 필터 Picker
             HStack {
                 Text("All \(15)")
                     .bold()
@@ -107,17 +109,18 @@ struct LogListData: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(listData) { item in
-                        VStack {
-                            
+                        VStack(alignment: .leading) {
                             Image(item.mainImage)
                                 .resizable()
-                                .frame(width: 100, height: 100)
+                                .frame(width: 150, height: 150)
                             Text(item.title)
                                 .font(.headline)
                                 .foregroundColor(.black)
+                                .offset(x: 5)
                             Text(item.description)
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
+                                .offset(x: 5)
                         }
                     }
                 }
