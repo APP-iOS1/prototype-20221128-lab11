@@ -11,7 +11,7 @@ import SwiftUI
 struct PlaceSoundApp: App {
     var body: some Scene {
         WindowGroup {
-            MyLogView()
+            ContentView()
         }
     }
 }
