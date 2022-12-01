@@ -19,6 +19,7 @@ extension CLLocationCoordinate2D: Identifiable {
     }
 }
 
+
 struct HomeView: View {
     // modal sheet를 보여줄지를 결정하는 상태 프로퍼티
     @State private var showingAddMarker = false
@@ -27,26 +28,28 @@ struct HomeView: View {
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 40.729675,
                                        longitude: -73.996925),
-        span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 0.006))
+        span: MKCoordinateSpan(latitudeDelta: 0.006, longitudeDelta: 0.006))
+    @State var tracking: MapUserTrackingMode = .follow
+
     
     // 0.006
     // 주소를 haymarket으로
     let annotations = [
         City(name: "NewYork1", coordinate: CLLocationCoordinate2D(latitude: 40.729675, longitude: -73.996925)),
-        City(name: "NewYork2", coordinate: CLLocationCoordinate2D(latitude: 40.729600, longitude: -73.996990)),
-        City(name: "NewYork3", coordinate: CLLocationCoordinate2D(latitude: 40.729300, longitude: -73.996930)),
+        City(name: "NewYork2", coordinate: CLLocationCoordinate2D(latitude: 40.72900, longitude: -73.997000)),
+        City(name: "NewYork3", coordinate: CLLocationCoordinate2D(latitude: 40.729300, longitude: -73.996000))
     ]
     
     var body: some View {
 
         //        NavigationStack {
 //        ZStack {
-            Map(coordinateRegion: $region, annotationItems: annotations) { item in
+            Map(coordinateRegion: $region, showsUserLocation: true,
+                userTrackingMode: $tracking, annotationItems: annotations) { item in
 //                MapMarker(coordinate: $0.coordinate, tint: .purple)
                 // Custom mapmarker 사용을 위하여 MapMarker를 MapAnnotation으로 대체
-                MapAnnotation(coordinate: item.coordinate, content: {
+                MapAnnotation(coordinate: item.coordinate,  content: {
                     PlaceAnnotationView(title: item.name)
-                    
                 })
             }
             .gesture(DragGesture())
