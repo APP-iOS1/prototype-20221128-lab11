@@ -10,6 +10,7 @@ import SwiftUI
 struct AddPlaceSound: View {
     
     var body: some View {
+        ZStack {
             VStack(alignment: .leading, spacing: 20) {
                 Spacer()
                 AddPlaceSound_Header()
@@ -17,10 +18,15 @@ struct AddPlaceSound: View {
                 ScrollView {
                     PlaceSearch()
                     SongSearch()
-                    Spacer()
-                    SaveButton()
+                    //                    Spacer()
+                    //                    SaveButton()
                 }
             }
+            VStack {
+                Spacer()
+                SaveButton()
+            }
+        }
     }
 }
 
@@ -64,7 +70,7 @@ struct SongSearch: View {
                     .fontWeight(.medium)
                 Spacer()
             }
-                .padding(.leading, 15.0)
+            .padding(.leading, 15.0)
             SearchBar()
                 .padding()
             AddedListView()
