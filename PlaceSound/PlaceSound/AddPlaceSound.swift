@@ -10,6 +10,7 @@ import SwiftUI
 struct AddPlaceSound: View {
     
     var body: some View {
+        ZStack {
             VStack(alignment: .leading, spacing: 20) {
                 Spacer()
                 AddPlaceSound_Header()
@@ -17,10 +18,15 @@ struct AddPlaceSound: View {
                 ScrollView {
                     PlaceSearch()
                     SongSearch()
-                    Spacer()
-                    SaveButton()
+                    //                    Spacer()
+                    //                    SaveButton()
                 }
             }
+            VStack {
+                Spacer()
+                SaveButton()
+            }
+        }
     }
 }
 
@@ -35,38 +41,47 @@ struct AddPlaceSound_Header: View {
 }
 
 struct PlaceSearch: View {
+    @State var inputPlace: String = ""
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("Place")
                 .font(.title3)
                 .fontWeight(.medium)
                 .padding(.leading, 15.0)
+                .foregroundColor(.placeSoundPurple)
             VStack {
                 HStack {
-                    Text("Enter Place")
+//                    Text("Enter Place")
+                    TextField("Enter Place", text: $inputPlace)
                         .padding(.leading, 15.0)
                     Spacer()
                 }
                 Divider()
             }
-            .foregroundColor(.gray)
         }
         .padding(.bottom, 20.0)
     }
 }
 
 struct SongSearch: View {
+    @State var searchSong: String = ""
     var body: some View {
-        VStack {
-            HStack {
-                Text("Search ")
-                    .font(.title3)
-                    .fontWeight(.medium)
-                Spacer()
-            }
+        VStack(alignment: .leading, spacing: 20) {
+            Text("Search Songs")
+                .font(.title3)
+                .fontWeight(.medium)
                 .padding(.leading, 15.0)
-            SearchBar()
-                .padding()
+                .foregroundColor(.placeSoundPurple)
+            VStack {
+                HStack {
+                    TextField("Search Song", text: $searchSong)
+                        .padding(.leading, 15.0)
+                    Spacer()
+                }
+                Divider()
+            }
+            .padding(.bottom, 20.0)
+//                .padding()
             AddedListView()
         }
     }
@@ -74,17 +89,22 @@ struct SongSearch: View {
 
 struct SaveButton: View {
     var body: some View {
-        Button {
-        } label: {
-            ZStack {
-                Rectangle()
-                    .cornerRadius(40)
-                    .frame(width: 310, height: 50)
-                Text("Save")
-                    .foregroundColor(.white)
+        VStack {
+            Button {
+            } label: {
+                ZStack {
+                    Rectangle()
+                        .cornerRadius(40)
+                        .frame(width: 310, height: 50)
+                    Text("Save")
+                        .foregroundColor(.white)
+                }
             }
+            .padding()
         }
-        .padding()
+        .frame(width: 390)
+        .background(Color.white)
+        .shadow(radius: 3)
     }
 }
 
