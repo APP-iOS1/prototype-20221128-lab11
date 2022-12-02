@@ -34,21 +34,22 @@ struct MyLogView: View {
     var body: some View {
         VStack {
             // 세팅뷰 연결
-            HStack {
-                NavigationLink {
-                    SettingView()
-                } label: {
-                    Spacer()
-                    Image(systemName: "gearshape")
-                        .font(.title2)
-                    //                        .resizable()
-                        .foregroundColor(.placeSoundPurple)
-                    //                        .frame(width: 30, height: 30)
-                    //                                                .offset(y: -30)
-                        .padding(.top, -15)
-                        .padding(.trailing)
-                }
-            }
+            SettingIcon()
+            //            HStack {
+            //                NavigationLink {
+            //                    SettingView()
+            //                } label: {
+            //                    Spacer()
+            //                    Image(systemName: "gearshape")
+            //                        .font(.title2)
+            //                    //                        .resizable()
+            //                        .foregroundColor(.placeSoundPurple)
+            //                    //                        .frame(width: 30, height: 30)
+            //                    //                        .offset(y: -30)
+            //                        .padding(.top, -15)
+            //                        .padding(.trailing)
+            //                }
+            //            }
             
             
             //            NavigationView {
@@ -100,6 +101,7 @@ struct MyLogView: View {
                 LogListData(userDataArray: $userDataArray)
             }.listStyle(.plain)
         }
+        
     }
 }
 
@@ -144,6 +146,34 @@ struct LogListData: View {
     }
 }
 
+
+struct SettingIcon: View {
+    var body: some View {
+        
+        VStack(alignment: .leading) {
+            // 세팅뷰 연결
+            
+            NavigationLink {
+                SettingView()
+            } label: {
+                
+                Image(systemName: "gearshape")
+                    .font(.title2)
+                //                        .resizable()
+                    .foregroundColor(.placeSoundPurple)
+                //                        .frame(width: 30, height: 30)
+                
+                //                        .padding(.top, -30)
+                //                        .padding(.bottom, -30)
+                
+                
+            }
+            
+        }
+        
+        
+    }
+}
 
 struct MyLogView_Previews: PreviewProvider {
     static var previews: some View {

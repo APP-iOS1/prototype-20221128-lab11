@@ -62,7 +62,7 @@ struct OnBoardingView: View {
                         }
                     }
                 }
-          
+            
             Button {
                 if self.currentStep < onBoardingSteps.count - 1 {
                     self.currentStep += 1
