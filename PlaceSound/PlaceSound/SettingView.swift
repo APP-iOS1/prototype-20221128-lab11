@@ -17,7 +17,7 @@ struct SettingView: View {
         VStack {
             ZStack{
                 Rectangle()
-                    .foregroundColor(Color("lightgray"))
+                    .foregroundColor(.placeSoundOnboardingPurple)
                     .edgesIgnoringSafeArea(.top)
                 StreamingList(onSync: $onSync)
             }
@@ -67,9 +67,11 @@ struct SetList: View {
             Toggle(isOn: $onStart) {
                 Text("PlaceSound on app start")
             }
+            .tint(.placeSoundPurple)
             Toggle(isOn: $haptic) {
                 Text("Haptic Feedback")
             } //toggle
+            .tint(.placeSoundPurple)
         }
         .listStyle(.plain)
     }
@@ -82,10 +84,11 @@ struct StreamingList: View {
         VStack {
             Text("SETTINGS")
                 .fontWeight(.bold)
+                .foregroundColor(.white)
             HStack {
                 Text("STREAMING")
                     .font(.callout)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
                     .fontWeight(.bold)
                 Spacer()
             }
@@ -104,6 +107,7 @@ struct StreamingList: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 30, height: 30)
                         Text("APPLE MUSIC")
+                            .foregroundColor(.black)
                             .fontWeight(.bold)
                     }
                     Text("Play full songs in PlaceSound. Add songs to your log.")
@@ -112,10 +116,12 @@ struct StreamingList: View {
                     Divider()
                     Toggle(isOn: $onSync) {
                         Text("Sync PlaceSound to Apple Music")
-                            .font(.title3)
+                            .foregroundColor(.black)
+                            .font(.headline)
                     }
+                    .tint(.placeSoundOnboardingPurple)
                     Text("Learn More")
-                        .foregroundColor(.blue)
+                        .foregroundColor(.placeSoundOnboardingPurple)
                 }
                 .padding(EdgeInsets(top: 5, leading: 40, bottom: 5, trailing: 40))
             }

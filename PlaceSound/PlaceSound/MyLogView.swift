@@ -115,7 +115,7 @@ struct LogListData: View {
                 VStack(alignment: .leading) {
                     Text("\(key)")
                         .font(.headline)
-                        .foregroundColor(.black)
+                        .foregroundColor(.placeSoundBlack)
                     Text("\(value)")
                         .font(.subheadline)
                         .foregroundColor(.gray)
@@ -130,7 +130,7 @@ struct LogListData: View {
                                 .frame(width: 150, height: 150)
                             Text(item.title)
                                 .font(.headline)
-                                .foregroundColor(.black)
+                                .foregroundColor(.placeSoundBlack)
                                 .offset(x: 5)
                             Text(item.description)
                                 .font(.subheadline)

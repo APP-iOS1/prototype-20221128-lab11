@@ -30,7 +30,7 @@ struct OnBoardingView: View {
     
     var body: some View {
         ZStack {
-            Color.placeSoundPurple
+            Color.placeSoundOnboardingPurple
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 ZStack {
@@ -83,7 +83,7 @@ struct OnBoardingView: View {
                         .cornerRadius(14)
                         .font(.title)
                         .background(Color.white)
-                        .foregroundColor(.placeSoundPurple)
+                        .foregroundColor(.placeSoundOnboardingPurple)
                 }
                 .fullScreenCover(isPresented: $showLoginView) {
                     ContentView()

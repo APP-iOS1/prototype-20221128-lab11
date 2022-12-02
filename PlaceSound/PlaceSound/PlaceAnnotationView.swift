@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlaceAnnotationView: View {
+    @Environment(\.colorScheme) private var colorScheme
     @State private var showingPlayList = false
     @State private var showTitle = true
     
@@ -24,7 +25,7 @@ struct PlaceAnnotationView: View {
 //                .opacity(showTitle ? 0 : 1)
 //                .padding(.bottom, 5)
             
-            Image("mapMarker")
+            Image(colorScheme == .dark ? "mapMarkerDark" : "mapMarkerLight")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 35)

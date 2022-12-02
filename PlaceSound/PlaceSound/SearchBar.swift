@@ -18,7 +18,7 @@ struct SearchBar: View {
                 // 정서니가 짠 코드
                 // 정선이가 한 몫한 코드 개짱임 ㅠ
                     .cornerRadius(8)
-                    .foregroundColor(.placeSoundPurple)
+                    .foregroundColor(.placeSoundOnboardingPurple)
                     .padding(.horizontal, 10)
                 //                .offset(y: -320)
                 //                .onTapGesture {
