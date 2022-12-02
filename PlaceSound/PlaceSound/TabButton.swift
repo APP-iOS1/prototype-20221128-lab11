@@ -17,7 +17,7 @@ struct TabButton: View {
             Spacer()
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(.white)
+                    .foregroundColor(.placeSoundWhite)
                     .frame(width: 350, height: 80)
                     .shadow(radius: 3)
                 HStack {
@@ -34,7 +34,7 @@ struct TabButton: View {
                                     .padding(1)
                             }
                             // nearBy버튼이 눌리면 색상변경, 토글이 내려가면 다시 홈뷰로
-                            .foregroundColor(self.isNearByShowingSheet ? .placeSoundPurple : .lightGray)
+                            .foregroundColor(self.isNearByShowingSheet ? .placeSoundPurple : .placeSoundGray)
                         }
                     })
                     .sheet(isPresented: $isNearByShowingSheet, content: {
@@ -54,7 +54,7 @@ struct TabButton: View {
                                 .padding(1)
                         }
                         // 조건식에 || 마이로그뷰 조건 추가 예정
-                        .foregroundColor(self.isNearByShowingSheet || isMyLogClicked  ? .lightGray : .placeSoundPurple)
+                        .foregroundColor(self.isNearByShowingSheet || isMyLogClicked  ? .placeSoundGray : .placeSoundPurple)
                     })
                     
                     Spacer()
@@ -71,7 +71,7 @@ struct TabButton: View {
                                         .font(.caption)
                                         .padding(1)
                                 }
-                                .foregroundColor(.lightGray)
+                                .foregroundColor(.placeSoundGray)
                                 
                             }
 //                        })

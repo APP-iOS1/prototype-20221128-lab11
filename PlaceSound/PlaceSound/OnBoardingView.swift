@@ -29,59 +29,65 @@ struct OnBoardingView: View {
     }
     
     var body: some View {
-        VStack {
-            ZStack {
-                Color.placeSoundPurple
-                    .edgesIgnoringSafeArea(.all)
-                TabView(selection: $currentStep) {
-                    ForEach(0..<onBoardingSteps.count, id: \.self) { it in
-                        VStack {
-                            Image(onBoardingSteps[it].image)
-                                .resizable()
-                                .frame(width: 250, height: 250)
-                            
-                            //                        Text(onBoardingSteps[it].description)
-                            //                            .font(.title)
-                            //                            .bold()
+        ZStack {
+            Color.placeSoundPurple
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                ZStack {
+                    //                    Color.placeSoundPurple
+                    //                        .edgesIgnoringSafeArea(.all)
+                    TabView(selection: $currentStep) {
+                        ForEach(0..<onBoardingSteps.count, id: \.self) { it in
+                            VStack {
+                                Image(onBoardingSteps[it].image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 450)
+                                
+                                //                        Text(onBoardingSteps[it].description)
+                                //                            .font(.title)
+                                //                            .bold()
+                            }
+                            .tag(it)
                         }
-                        .tag(it)
-                    }
-                }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            }
+                    }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                }
                 HStack {
                     ForEach(0..<onBoardingSteps.count, id: \.self) { it in
                         if it == currentStep {
-                            Rectangle()
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundColor(.highlightYellow)
                                 .frame(width: 20, height: 10)
-                                .cornerRadius(10)
-                                .background(Color.placeSoundPurple)
+                            //                                .cornerRadius(10)
                         } else {
                             Circle()
                                 .frame(width: 10, height: 10)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.lightGray)
                         }
                     }
                 }
-          
-            Button {
-                if self.currentStep < onBoardingSteps.count - 1 {
-                    self.currentStep += 1
-                } else {
-                    showLoginView = true
+                .padding(.bottom)
+                Button {
+                    if self.currentStep < onBoardingSteps.count - 1 {
+                        self.currentStep += 1
+                    } else {
+                        showLoginView = true
+                        
+                    }
                     
+                } label: {
+                    Text(currentStep < onBoardingSteps.count - 1 ? "Next" : "Start")
+                        .fontWeight(.semibold)
+                        .padding(10)
+                        .frame(maxWidth: .infinity)
+                        .cornerRadius(14)
+                        .font(.title)
+                        .background(Color.white)
+                        .foregroundColor(.placeSoundPurple)
                 }
-                
-            } label: {
-                Text(currentStep < onBoardingSteps.count - 1 ? "다음으로" : "시작하기")
-                    .padding(15)
-                    .frame(maxWidth: .infinity)
-                    .cornerRadius(14)
-                    .font(.title)
-                    .background(Color.placeSoundPurple)
-                    .foregroundColor(.white)
-            }
-            .fullScreenCover(isPresented: $showLoginView) {
-                ContentView()
+                .fullScreenCover(isPresented: $showLoginView) {
+                    ContentView()
+                }
             }
         }
     }
