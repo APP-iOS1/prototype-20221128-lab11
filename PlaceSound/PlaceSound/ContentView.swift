@@ -11,6 +11,8 @@ import SwiftUI
 extension Color{
     static let placeSoundPurple = Color("PlaceSoundPurple")
     static let placeSoundTextPurple = Color("PlaceSoundTextPurple")
+    static let placeSoundOnboardingPurple = Color("PlaceSoundOnboardingPurple")
+    static let placeSoundWhitetoBlack = Color("PlaceSoundWhitetoBlack")
     static let placeSoundGray = Color("PlaceSoundGray")
     static let placeSoundBlack = Color("PlaceSoundBlack")
     static let placeSoundWhite = Color("PlaceSoundWhite")

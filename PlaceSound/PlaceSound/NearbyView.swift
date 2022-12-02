@@ -92,7 +92,7 @@ struct NearbyView: View {
                                     case true:
                                         Label("remove", systemImage: "hand.thumbsup.fill")
                                             .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
+                                            .foregroundColor(.placeSoundPurple)
                                     default:
                                         Label("remove", systemImage: "hand.thumbsup")
                                             .labelStyle(.iconOnly)
@@ -148,7 +148,7 @@ struct NearbyView: View {
                                     case true:
                                         Label("remove", systemImage: "hand.thumbsup.fill")
                                             .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
+                                            .foregroundColor(.placeSoundPurple)
                                     default:
                                         Label("remove", systemImage: "hand.thumbsup")
                                             .labelStyle(.iconOnly)
@@ -204,7 +204,7 @@ struct NearbyView: View {
                                     case true:
                                         Label("remove", systemImage: "hand.thumbsup.fill")
                                             .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
+                                            .foregroundColor(.placeSoundPurple)
                                     default:
                                         Label("remove", systemImage: "hand.thumbsup")
                                             .labelStyle(.iconOnly)
@@ -260,7 +260,7 @@ struct NearbyView: View {
                                     case true:
                                         Label("remove", systemImage: "hand.thumbsup.fill")
                                             .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
+                                            .foregroundColor(.placeSoundPurple)
                                     default:
                                         Label("remove", systemImage: "hand.thumbsup")
                                             .labelStyle(.iconOnly)
@@ -316,7 +316,7 @@ struct NearbyView: View {
                                     case true:
                                         Label("remove", systemImage: "hand.thumbsup.fill")
                                             .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
+                                            .foregroundColor(.placeSoundPurple)
                                     default:
                                         Label("remove", systemImage: "hand.thumbsup")
                                             .labelStyle(.iconOnly)
@@ -373,7 +373,7 @@ struct NearbyView: View {
                                     case true:
                                         Label("remove", systemImage: "hand.thumbsup.fill")
                                             .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
+                                            .foregroundColor(.placeSoundPurple)
                                     default:
                                         Label("remove", systemImage: "hand.thumbsup")
                                             .labelStyle(.iconOnly)
@@ -429,7 +429,7 @@ struct NearbyView: View {
                                     case true:
                                         Label("remove", systemImage: "hand.thumbsup.fill")
                                             .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
+                                            .foregroundColor(.placeSoundPurple)
                                     default:
                                         Label("remove", systemImage: "hand.thumbsup")
                                             .labelStyle(.iconOnly)

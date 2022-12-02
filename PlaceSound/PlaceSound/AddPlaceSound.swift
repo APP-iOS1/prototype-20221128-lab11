@@ -97,13 +97,14 @@ struct SaveButton: View {
                         .cornerRadius(40)
                         .frame(width: 310, height: 50)
                     Text("Save")
-                        .foregroundColor(.white)
+                        .foregroundColor(.placeSoundWhite)
+                        .bold()
                 }
             }
             .padding()
         }
         .frame(width: 390)
-        .background(Color.white)
+        .background(Color.placeSoundWhitetoBlack)
         .shadow(radius: 3)
     }
 }
