@@ -17,7 +17,7 @@ struct TabButton: View {
             Spacer()
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(.white)
+                    .foregroundColor(.placeSoundWhite)
                     .frame(width: 350, height: 80)
                     .shadow(radius: 3)
                 HStack {
