@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		037609C62936580600189F56 /* AddedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037609C52936580600189F56 /* AddedListView.swift */; };
-		2DC2116F2938753E000E4101 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC2116E2938753E000E4101 /* OnBoardingView.swift */; };
 		8696BFF82935C5BE002C547C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696BFF72935C5BE002C547C /* SettingView.swift */; };
 		F091F4FA2935BFC600537E49 /* PlaceSoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091F4F92935BFC600537E49 /* PlaceSoundApp.swift */; };
 		F091F4FC2935BFC600537E49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091F4FB2935BFC600537E49 /* ContentView.swift */; };
@@ -26,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		037609C52936580600189F56 /* AddedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedListView.swift; sourceTree = "<group>"; };
-		2DC2116E2938753E000E4101 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		8696BFF72935C5BE002C547C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		F091F4F62935BFC600537E49 /* PlaceSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F091F4F92935BFC600537E49 /* PlaceSoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSoundApp.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				F091F50D2935ECC300537E49 /* TabButton.swift */,
 				F091F50F2935ECE000537E49 /* PlayBar.swift */,
 				F091F50B2935C18D00537E49 /* MyLogView.swift */,
-				2DC2116E2938753E000E4101 /* OnBoardingView.swift */,
 				8696BFF72935C5BE002C547C /* SettingView.swift */,
 				F0B2DF3C2936FB2A00C8CC05 /* SearchBar.swift */,
 				F0B2DF3E2936FB3D00C8CC05 /* AddPlaceSound.swift */,
@@ -175,7 +172,6 @@
 				F091F5082935C17800537E49 /* HomeView.swift in Sources */,
 				F091F4FC2935BFC600537E49 /* ContentView.swift in Sources */,
 				F091F50C2935C18D00537E49 /* MyLogView.swift in Sources */,
-				2DC2116F2938753E000E4101 /* OnBoardingView.swift in Sources */,
 				8696BFF82935C5BE002C547C /* SettingView.swift in Sources */,
 				F091F50E2935ECC300537E49 /* TabButton.swift in Sources */,
 				F0B2DF3D2936FB2A00C8CC05 /* SearchBar.swift in Sources */,

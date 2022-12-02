@@ -22,7 +22,6 @@ struct ContentView: View {
                 // 탭뷰 대신 사용할 탭 버튼을 불러옴
                 TabButton()
                 SearchBar()
-                    .shadow(radius: 3)
                     .offset(y: -320)
             }
         }
