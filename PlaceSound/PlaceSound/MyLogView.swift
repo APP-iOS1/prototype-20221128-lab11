@@ -15,25 +15,24 @@ struct userData: Identifiable {
 }
 
 var listData: [userData] = [
-
+    
     userData(mainImage: "musicImg2", title: "IU", description: "Palette"),
     userData(mainImage: "musicImg", title: "IU", description: "꽃갈피 둘"),
     userData(mainImage: "musicImg3", title: "IU", description: "이 지금"),
     userData(mainImage: "musicImg2", title: "IU", description: "밤편지"),
 ]
 
+
 struct MyLogView: View {
     
     @State private var selctedDate: String = ""
-
+    @State private var isMyPageActive: Bool = false
     @State private var userDate: [String] = [ "All" ,"Today", "Yesterday", "3months ago", "6months ago"]
     
     @State private var userDataArray: [String:String] = ["All":"Apgujeong Rodeo Street", "Today":"Gangnam Station", "Yesterday":"Apple garosu-gil", "3monthes ago":"Sinchon"]
-
     
     var body: some View {
         VStack {
-    
             // 세팅뷰 연결
             HStack {
                 NavigationLink {
@@ -42,14 +41,30 @@ struct MyLogView: View {
                     Spacer()
                     Image(systemName: "gearshape")
                         .font(.title2)
-//                        .resizable()
+                    //                        .resizable()
                         .foregroundColor(.placeSoundPurple)
-//                        .frame(width: 30, height: 30)
-//                        .offset(y: -30)
+                    //                        .frame(width: 30, height: 30)
+                    //                                                .offset(y: -30)
                         .padding(.top, -15)
                         .padding(.trailing)
                 }
             }
+            
+            
+            //            NavigationView {
+            //                VStack {
+            //
+            //
+            //
+            //                }.navigationBarItems(trailing:
+            //                                        NavigationLink(destination: SettingView(), isActive: $isMyPageActive) {
+            //                    Image(systemName: "gearshape")
+            //
+            //                })
+            //
+            //            }
+            
+            
             // user 프로필
             Image("mylog_profileimg")
                 .resizable()
