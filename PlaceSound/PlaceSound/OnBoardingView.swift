@@ -8,15 +8,16 @@
 import SwiftUI
 
 private let onBoardingSteps = [
-    OnBoardingStep(image: "musicImg", description: "test text"),
-    OnBoardingStep(image: "musicImg2", description: "test text"),
-    OnBoardingStep(image: "musicImg3", description: "test text")
+    OnBoardingStep(image: "onboarding1"),
+    OnBoardingStep(image: "onboarding2"),
+    OnBoardingStep(image: "onboarding3"),
+    OnBoardingStep(image: "onboarding4")
 ]
 
 struct OnBoardingStep: Identifiable {
     let id = UUID()
     let image: String
-    let description: String
+    //    let description: String
 }
 
 struct OnBoardingView: View {
@@ -29,35 +30,39 @@ struct OnBoardingView: View {
     
     var body: some View {
         VStack {
-            TabView(selection: $currentStep) {
-                ForEach(0..<onBoardingSteps.count, id: \.self) { it in
-                    VStack {
-                        Image(onBoardingSteps[it].image)
-                            .resizable()
-                            .frame(width: 250, height: 250)
-                        
-                        Text(onBoardingSteps[it].description)
-                            .font(.title)
-                            .bold()
+            ZStack {
+                Color.placeSoundPurple
+                    .edgesIgnoringSafeArea(.all)
+                TabView(selection: $currentStep) {
+                    ForEach(0..<onBoardingSteps.count, id: \.self) { it in
+                        VStack {
+                            Image(onBoardingSteps[it].image)
+                                .resizable()
+                                .frame(width: 250, height: 250)
+                            
+                            //                        Text(onBoardingSteps[it].description)
+                            //                            .font(.title)
+                            //                            .bold()
+                        }
+                        .tag(it)
                     }
-                    .tag(it)
-                }
-            }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            
-            HStack {
-                ForEach(0..<onBoardingSteps.count, id: \.self) { it in
-                    if it == currentStep {
-                        Rectangle()
-                            .frame(width: 20, height: 10)
-                            .cornerRadius(10)
-                            .background(Color.placeSoundPurple)
-                    } else {
-                        Circle()
-                            .frame(width: 10, height: 10)
-                            .foregroundColor(.gray)
-                    }
-                }
+                }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }
+                HStack {
+                    ForEach(0..<onBoardingSteps.count, id: \.self) { it in
+                        if it == currentStep {
+                            Rectangle()
+                                .frame(width: 20, height: 10)
+                                .cornerRadius(10)
+                                .background(Color.placeSoundPurple)
+                        } else {
+                            Circle()
+                                .frame(width: 10, height: 10)
+                                .foregroundColor(.gray)
+                        }
+                    }
+                }
+          
             Button {
                 if self.currentStep < onBoardingSteps.count - 1 {
                     self.currentStep += 1
