@@ -31,12 +31,6 @@ struct NearbyView: View {
             Spacer()
             VStack {
                 HStack {
-<<<<<<< Updated upstream
-                    Text("송산1동")
-                    Text("주변")
-                    Picker(selection: $rangeListIndex, label: Text("범위")) {
-                        ForEach (0..<rangeList.count) {
-=======
                     Text("New York, NY")
                         .foregroundColor(.placeSoundPurple)
                         .font(.title2)
@@ -46,7 +40,6 @@ struct NearbyView: View {
                     // 범위를 지정해줄 Picker 선언
                     Picker(selection: $rangeListIndex, label: Text("Distance")) {
                         ForEach (0..<rangeList.count, id:\.self) {
->>>>>>> Stashed changes
                             Text(self.rangeList[$0])
                         }
                     }
