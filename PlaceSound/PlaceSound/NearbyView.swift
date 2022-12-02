@@ -14,24 +14,13 @@ struct NearbyView: View {
     
     // Picker에서 기본 인덱스를 지정해줄 상태 프로퍼티
     @State private var rangeListIndex = 0
-    @State private var isRecommended_01: Bool = false
-    @State private var isRecommended_02: Bool = false
-    @State private var isRecommended_03: Bool = false
-    @State private var isRecommended_04: Bool = false
-    @State private var isRecommended_05: Bool = false
-    @State private var isRecommended_06: Bool = false
-    @State private var isRecommended_07: Bool = false
-    
-//    for index in 0...7 {
-//        @State private var isRecom("\(index)"): Bool = false
-//    }
     
     var body: some View {
         VStack {
             Spacer()
             VStack {
                 HStack {
-                    Text("New York, NY")
+                    Text("Haymarket Virginia, 20169")
                         .foregroundColor(.placeSoundPurple)
                         .font(.title2)
                         .fontWeight(.bold)
@@ -45,12 +34,13 @@ struct NearbyView: View {
                     }
                     Spacer()
                 }
-                .fontWeight(.semibold)
             }
             .padding(.horizontal)
             
             Divider()
+            // 노래 리스트들을 보여줄 스크롤 뷰
             ScrollView {
+                // 노래 리스트가 10개 이상인 경우 오류가 발생하므로 Group 으로 묶어주었다.
                 Group {
                     HStack {
                         ZStack {
@@ -86,18 +76,11 @@ struct NearbyView: View {
                                 Image("AppleMusicBadge")
                                 Spacer()
                                 Button(action: {
-                                    isRecommended_01.toggle()
+                                    
                                 }, label: {
-                                    switch isRecommended_01 {
-                                    case true:
-                                        Label("remove", systemImage: "hand.thumbsup.fill")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
-                                    default:
-                                        Label("remove", systemImage: "hand.thumbsup")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.gray)
-                                    }
+                                    Label("remove", systemImage: "trash")
+                                        .labelStyle(.iconOnly)
+                                        .foregroundColor(.gray)
                                 })
                             }
                         }
@@ -142,18 +125,11 @@ struct NearbyView: View {
                                 Image("AppleMusicBadge")
                                 Spacer()
                                 Button(action: {
-                                    isRecommended_02.toggle()
+                                    
                                 }, label: {
-                                    switch isRecommended_02 {
-                                    case true:
-                                        Label("remove", systemImage: "hand.thumbsup.fill")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
-                                    default:
-                                        Label("remove", systemImage: "hand.thumbsup")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.gray)
-                                    }
+                                    Label("More", systemImage: "trash")
+                                        .labelStyle(.iconOnly)
+                                        .foregroundColor(.gray)
                                 })
                             }
                         }
@@ -198,18 +174,11 @@ struct NearbyView: View {
                                 Image("AppleMusicBadge")
                                 Spacer()
                                 Button(action: {
-                                    isRecommended_03.toggle()
+                                    
                                 }, label: {
-                                    switch isRecommended_03 {
-                                    case true:
-                                        Label("remove", systemImage: "hand.thumbsup.fill")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
-                                    default:
-                                        Label("remove", systemImage: "hand.thumbsup")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.gray)
-                                    }
+                                    Label("remove", systemImage: "trash")
+                                        .labelStyle(.iconOnly)
+                                        .foregroundColor(.gray)
                                 })
                             }
                         }
@@ -254,18 +223,11 @@ struct NearbyView: View {
                                 Image("AppleMusicBadge")
                                 Spacer()
                                 Button(action: {
-                                    isRecommended_04.toggle()
+                                    
                                 }, label: {
-                                    switch isRecommended_04 {
-                                    case true:
-                                        Label("remove", systemImage: "hand.thumbsup.fill")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
-                                    default:
-                                        Label("remove", systemImage: "hand.thumbsup")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.gray)
-                                    }
+                                    Label("remove", systemImage: "trash")
+                                        .labelStyle(.iconOnly)
+                                        .foregroundColor(.gray)
                                 })
                             }
                         }
@@ -301,27 +263,20 @@ struct NearbyView: View {
                             })
                         }
                         VStack(alignment: .leading) {
-                            Text("라일락")
+                            Text("Lilac")
                                 .fontWeight(.semibold)
-                            Text("아이유")
+                            Text("IU")
                                 .foregroundColor(.gray)
                             Spacer()
                             HStack {
                                 Image("AppleMusicBadge")
                                 Spacer()
                                 Button(action: {
-                                    isRecommended_05.toggle()
+                                    
                                 }, label: {
-                                    switch isRecommended_05 {
-                                    case true:
-                                        Label("remove", systemImage: "hand.thumbsup.fill")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
-                                    default:
-                                        Label("remove", systemImage: "hand.thumbsup")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.gray)
-                                    }
+                                    Label("remove", systemImage: "trash")
+                                        .labelStyle(.iconOnly)
+                                        .foregroundColor(.gray)
                                 })
                             }
                         }
@@ -367,18 +322,11 @@ struct NearbyView: View {
                                 Image("AppleMusicBadge")
                                 Spacer()
                                 Button(action: {
-                                    isRecommended_06.toggle()
+                                    
                                 }, label: {
-                                    switch isRecommended_06 {
-                                    case true:
-                                        Label("remove", systemImage: "hand.thumbsup.fill")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
-                                    default:
-                                        Label("remove", systemImage: "hand.thumbsup")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.gray)
-                                    }
+                                    Label("remove", systemImage: "trash")
+                                        .labelStyle(.iconOnly)
+                                        .foregroundColor(.gray)
                                 })
                             }
                         }
@@ -414,27 +362,20 @@ struct NearbyView: View {
                             })
                         }
                         VStack(alignment: .leading) {
-                            Text("나의 사춘기에게")
+                            Text("To My Youth")
                                 .fontWeight(.semibold)
-                            Text("볼빨간사춘기")
+                            Text("BOL4")
                                 .foregroundColor(.gray)
                             Spacer()
                             HStack {
                                 Image("AppleMusicBadge")
                                 Spacer()
                                 Button(action: {
-                                    isRecommended_07.toggle()
+                                    
                                 }, label: {
-                                    switch isRecommended_07 {
-                                    case true:
-                                        Label("remove", systemImage: "hand.thumbsup.fill")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.yellow)
-                                    default:
-                                        Label("remove", systemImage: "hand.thumbsup")
-                                            .labelStyle(.iconOnly)
-                                            .foregroundColor(.gray)
-                                    }
+                                    Label("remove", systemImage: "trash")
+                                        .labelStyle(.iconOnly)
+                                        .foregroundColor(.gray)
                                 })
                             }
                         }
