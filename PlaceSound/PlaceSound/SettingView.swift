@@ -119,7 +119,7 @@ struct StreamingList: View {
                 }
                 .padding(EdgeInsets(top: 5, leading: 40, bottom: 5, trailing: 40))
             }
-            
+
         }
         
     }
