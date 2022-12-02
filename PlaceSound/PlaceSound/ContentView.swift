@@ -10,7 +10,12 @@ import SwiftUI
 // 커스텀 컬러를 불러오기 위한 익스텐션
 extension Color{
     static let placeSoundPurple = Color("PlaceSoundPurple")
+    static let placeSoundTextPurple = Color("PlaceSoundTextPurple")
+    static let placeSoundGray = Color("PlaceSoundGray")
+    static let placeSoundBlack = Color("PlaceSoundBlack")
+    static let placeSoundWhite = Color("PlaceSoundWhite")
     static let lightGray = Color("lightgray")
+    static let highlightYellow = Color("HighlightYellow")
 }
 
 struct ContentView: View {
