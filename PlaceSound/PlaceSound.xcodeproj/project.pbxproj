@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		037609C62936580600189F56 /* AddedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037609C52936580600189F56 /* AddedListView.swift */; };
+		03A7D4542939C5C800548AC9 /* MapClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A7D4532939C5C800548AC9 /* MapClusterView.swift */; };
 		2DC2116F2938753E000E4101 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC2116E2938753E000E4101 /* OnBoardingView.swift */; };
 		8696BFF82935C5BE002C547C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696BFF72935C5BE002C547C /* SettingView.swift */; };
 		F091F4FA2935BFC600537E49 /* PlaceSoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091F4F92935BFC600537E49 /* PlaceSoundApp.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		037609C52936580600189F56 /* AddedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedListView.swift; sourceTree = "<group>"; };
+		03A7D4532939C5C800548AC9 /* MapClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapClusterView.swift; sourceTree = "<group>"; };
 		2DC2116E2938753E000E4101 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		8696BFF72935C5BE002C547C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		F091F4F62935BFC600537E49 /* PlaceSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 				F091F4F92935BFC600537E49 /* PlaceSoundApp.swift */,
 				F091F4FB2935BFC600537E49 /* ContentView.swift */,
 				F091F5072935C17800537E49 /* HomeView.swift */,
+				03A7D4532939C5C800548AC9 /* MapClusterView.swift */,
 				F091F5092935C18300537E49 /* NearbyView.swift */,
 				037609C52936580600189F56 /* AddedListView.swift */,
 				F091F50D2935ECC300537E49 /* TabButton.swift */,
@@ -182,6 +185,7 @@
 				F091F5102935ECE000537E49 /* PlayBar.swift in Sources */,
 				F0B2DF3F2936FB3D00C8CC05 /* AddPlaceSound.swift in Sources */,
 				037609C62936580600189F56 /* AddedListView.swift in Sources */,
+				03A7D4542939C5C800548AC9 /* MapClusterView.swift in Sources */,
 				F0B2DF41293716A100C8CC05 /* PlaceAnnotationView.swift in Sources */,
 				F091F50E2935ECC300537E49 /* TabButton.swift in Sources */,
 				F091F5102935ECE000537E49 /* PlayBar.swift in Sources */,

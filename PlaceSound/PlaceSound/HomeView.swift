@@ -90,11 +90,11 @@ struct HomeView: View {
                 LocationButton {
                     locationManager.requestLocation()
                 }
-                .frame(height: 10)
+                .cornerRadius(50)
                 .labelStyle(.iconOnly)
                 .tint(.placeSoundPurple)
                 .foregroundColor(.white)
-                .offset(x: 150, y: 270)
+                .offset(x: 150, y: 260)
             }
         }
     }
