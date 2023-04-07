@@ -1,72 +1,82 @@
 # Place Sound
+![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
+![Swift](https://img.shields.io/badge/SwiftUI-0052CC?style=for-the-badge&logo=swift&logoColor=white)
+![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
+![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
 
-## 앱 정의(ADS)
-이 앱은 특정한 장소에서 내가 들었던 음악과 좌표를 기록하고 시간이 지나도 기록을 열람 할 수 있습니다.
 
-### 페르소나 설정
+## **소개** 
+<p align="center"><img src="https://user-images.githubusercontent.com/108975398/230643857-7cec81f7-50a3-4e1c-b9d7-4116b4eaee23.png" width=30%></p>
+
+```
+Place Sound Everywhere 🎶
+특별한 장소에 음악을 기록하고 특별한 음악을 장소에 기록 해줄 것입니다.
+기억은 잊혀지지만 기록은 잊혀지지 않습니다.
+```
+## 참여자
+<div align="center">
+  <table style="font-weight : bold">
+      <tr align="center">
+          <td colspan="5"> 우리들의 소중한 기록, 잊혀지지 않을 시간  </td>
+      </tr>
+      <tr>
+          <td align="center">
+              <a href="https://github.com/teddy5518">
+                  <img alt="박성민" src="https://avatars.githubusercontent.com/u/108975398?v=4" width="320" />            
+              </a>
+          </td>
+          <td align="center">
+              <a href="https://github.com/calledBlu">                 
+                  <img alt="김보미" src="https://avatars.githubusercontent.com/u/71758542?v=4" width="320" />            
+              </a>
+          </td>
+          <td align="center">
+              <a href="https://github.com/JSPark0099">                 
+                  <img alt="박정선" src="https://avatars.githubusercontent.com/u/91583287?v=4" width="320" />            
+              </a>
+          </td>
+          <td align="center">
+              <a href="https://github.com/hoonjong96">                 
+                  <img alt="박훈종" src="https://avatars.githubusercontent.com/u/97106032?v=4" width="320" />            
+              </a>
+          </td>
+          <td align="center">
+              <a href="https://github.com/blaire-pi">                 
+                  <img alt="윤예린" src="https://avatars.githubusercontent.com/u/56533266?v=4" width="320" />            
+              </a>
+          </td>
+      </tr>
+      <tr>
+          <td align="center">박성민</td>
+          <td align="center">김보미</td>
+          <td align="center">박정선</td>
+          <td align="center">박훈종</td>
+          <td align="center">윤예린</td>
+  </table>
+</div>
+<br>
+
 
 ## 주요기능
-- **탭 버튼** (탭을 탭뷰가 아닌 별도의 버튼으로 제작)
-    - **지도(홈)**
-        - 지도 위에 마커 표시
-            - 마커를 누르면 해당 장소에서 들었던 노래 확인 가능
-        - 마커 추가 방법
-            - 롱탭으로 장소에 노래 추가
-    - **추천**
-        - 카카오지도의 주변 탭에서 착안
-        - 사용자가 지정한 범위 내에서 다른 유저들이 들었던 노래를 추천순으로 보여줌
-        - 정확한 장소 정보를 제공하지 않음 → 반경 500**m**~ 6**km**
-    -   **마이로그(내 정보, 노래 기록 정보)**
-        - 카카오지도의 마이로그 탭 UI에 착안한 디자인
-        - 
+
+|<img src="https://user-images.githubusercontent.com/108975398/230643829-9b7d636b-9318-4c90-b7fe-5f56dc56d682.png" width="400"></img>|<img src="https://user-images.githubusercontent.com/108975398/230643821-f5228bb4-816a-4d4c-bba6-6b2b2740ea20.png" width="400"></img>|<img src="https://user-images.githubusercontent.com/108975398/230643841-dc136eff-7bfd-461d-8d10-d03205baef1d.png" width="400"></img>|<img src="https://user-images.githubusercontent.com/108975398/230643846-151dc936-89aa-4ba5-bca4-28ca4125d7ac.png" width="400"></img>|
+|:-:|:-:|:-:|:-:|
+
+
+- **🗺️ 지도**
+	- 지도 위에 마커 표시
+	- 마커를 누르면 해당 장소에서 들었던 노래 확인 가능
+- **⭐️ 추천**
+	- 반경 500m ~ 6km 범위로 장소 정보 제공
+- **✏️ 마이로그**
+	- 내 정보 및 노래 기록 열람
+
+## 개발 환경
+- iOS 16.0 이상
+- xcode 13.0
 
 ## 활용한 기술
 - MapKit
 
-## 1차 데모 피드백
-- 검색 바 **<보미>** `SearchBar`
-	- 음악 검색인지, 장소 검색인지 가이드 필요
-	- 검색바 색상이 너무 눈에 띄어서 텍스트 색과 상관없이 글이 묻힐 거 같음 cancel이 잘 보이지 않음
-	- 검색창의 투명도를 낮추고 검색창처럼 보이게 만들어주세요
-	- 검색창이 노래를 검색하는 것인지 장소를 검색하는 것인지 명확하지 않아 헷갈렸습니다.
-	- 지도뷰 검색 텍스트 필드에서 음악 검색 vs 장소 검색인지 플레이스 홀더로 알려주면 좋겠습니다.
-- 온보딩 뷰 <**템플릿**>
-	- 롱프레스에 대한 설명 필요
-	- 처음 맵 화면이 출력되었을 때 설명이 없어서 어떻게 사용하는 건지 알기 어렵습니다. 설명을 보여주는 온보딩 화면이 있으면 좋을 것 같습니다.
-- 홈  버튼 **<성민>**
-	- 누르면 현 위치로 돌아오도록
-- 모달 **<예린>** `HomeView` ,`AddPlaceSound`
-	- 현재 모달보다 더 많이 올라오거나~~풀 스크린 모달이었으면 좋겠다~~
-	- 모달창이 일부분만 처음에 올라와서 작성하기 버튼이 보이지 않아 어떠한 창인지 알기 어렵습니다.
-	- nearby탭에서 노래 목록 확인할 때 스크롤뷰인데 모달이 내려갈 때가 있어 불편
-	- ~~모달창을 닫을 때 X버튼으로도 닫을 수 있었으면~~
-	- 모달창에 스크롤뷰를 넣어서 스크롤을 내리다보면 모달창이 닫히는 경우가 있어서 해당 부분에 수정이 필요할 것 같습니다.
-- 탭 버튼 **<정선>** `TabButton`
-	- nearby 아이콘이 직관적이지 않음
-	- near by 탭이 이름이 조금 더 명확했으면 좋겠습니다.
-	- 버튼이 눌렸는지 아닌지 색으로 판단할 수 있게끔 개선 필요(탭뷰처럼)
-	- ~~탭 버튼의 몇몇 요소들을 다른 위치에 배치하는 것은?~~
-- 마이로그 **<훈종>** `MyLogView`
-	- 옆으로 스와이프한다는걸 알수있게 앨범간 간격을 좁히고 세번째 앨범을 반정도 걸치면 더 좋을 듯
-	- 기간 , 전체 이번달 3개월전 6개월전 전체기간
-- 노래 기록
-	- 노래를 추가한 시간이 떴으면 좋겠다
-- 전체적으로 핵심 기능 부각 필요 **<성민>** `HomeView`, `TabButton`
-
-### 팀 내 피드백
-- 아이콘
-	- 쓰레기통을 엄지척으로 바꿔야 함
-
-## 스크린샷
-
-## 참여자
-
-| <img src="https://avatars.githubusercontent.com/u/71758542?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/108975398?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/91583287?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/97106032?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/56533266?v=4" width=200> |
-| :---------------------: |:---------------------: |:---------------------: |:---------------------: |:---------------------: |
-| 김보미 | 박성민 | 박정선 | 박훈종 | 윤예린 |
-| [@bomyuniverse](https://github.com/bomyuniverse) |[@teddy5518](https://github.com/teddy5518)|[@JSPark0099](https://github.com/JSPark0099)|[@hoonjong96](https://github.com/hoonjong96)|[@blaire-pi](https://github.com/blaire-pi)|
-
-
-
-
-
+## 라이센스
+PlaceSound is available under the MIT license. See the [LICENSE](https://github.com/APPSCHOOL1-REPO/prototype-20221128-lab11/blob/main/LICENSE) file for more info.
